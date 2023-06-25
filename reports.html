@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Sense N Saves</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+       $(document).ready(function () {
+           // JavaScript code here
+           $.getJSON(
+               'https://api.thingspeak.com/channels/2080017/feeds.json?api_key=VVBD9COIAC5X93NO&results=15',
+               function (data) {
+                   // Process and display the data
+                   var wattageData = data.feeds;
+                   var html = '';
+
+                   // Create HTML table rows with animations
+                   for (var i = 0; i < wattageData.length; i++) {
+                       var timestampUTC = wattageData[i].created_at;
+                       var wattage = wattageData[i].field1;
+
+                       // Convert UTC timestamp to local timezone
+                       var timestampLocal = new Date(timestampUTC).toLocaleString();
+
+                       html +=
+                           '<tr style="--animation-index: ' + i + ';">' +
+                           '<td>' +
+                           timestampLocal +
+                           '</td><td>' +
+                           wattage +
+                           '</td></tr>';
+                   }
+
+                   // Add table rows to the HTML page
+                   $('#wattage-table').append(html);
+               }
+           );
+
+           // Apply animations to specific elements
+           $("header").addClass("animated fadeIn");
+           $("nav").addClass("animated slideIn");
+           $("tbody tr").addClass("animated fadeIn").each(function (index) {
+               $(this).css("--animation-index", index);
+           });
+           $("footer").addClass("animated fadeIn");
+       });
+    </script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">E-Sense N Save</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.html">Reports</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="rewards.html">Rewards</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <table id="wattage-table" class="table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Wattage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be dynamically generated here -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 E-Sense N Saves. All rights reserved.</p>
+    </footer>
+</body>
+</html>
