@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Sense N Saves</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        h1 {
+            color: #333;
+            font-size: 26px;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+      
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 100px;
+            color: #333;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .inventors-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 20px; /* Add padding between names and images */
+        }
+    
+        .inventor {
+            flex-basis: 24%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            padding: 10px; /* Add padding around images */
+        }
+    
+        .inventor img {
+            max-width: 90%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%; /* Crop image as a circle */
+        }
+    
+        .inventor:hover {
+            transform: scale(0.95);
+        }
+    
+        .inventor:hover img {
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 576px) {
+            .inventors-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .inventor img {
+            max-width: 50%;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease-in-out;
+            border-radius: 50%; /* Crop image as a circle */
+            }   
+            .inventor {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+        }
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">E-Sense N Save</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="reports.html">Reports</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="rewards.html">Rewards</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+        <hr size="2">
+        <h1>E-Sense n Save</h1>
+
+        
+    <p>"E-Sense n Save" is an IoT-based project that aims to address the issue of electricity wastage in household    appliances. It involves the development of a system that helps users keep track of their electrical activities     and provides a detailed cost-time analysis. Additionally, the system automatically switches off appliances in   case of electrical wastage due to user negligence.</p>
+
+    <p>The invention can be classified as a sophisticated device/system that utilizes Internet of Things (IoT)    technology. It comprises advanced hardware components, including sensors, microcontrollers, and communication  modules, to enable seamless data collection, analysis, and optimal control of home appliances. The project also  involves the development of a mobile/web application that interacts with the IoT hardware and displays the   cost-time analysis of electricity usage. A cloud computing system is utilized to store and process the data   collected by the IoT hardware.</p>
+
+    <p>The main objective of the invention is to promote energy efficiency and reduce electricity wastage in  households. By providing users with real-time information on their energy consumption patterns, the system   encourages responsible energy usage and helps reduce energy bills. It also contributes to minimizing carbon   emissions and environmental impacts associated with excessive energy consumption.</p>
+
+    <p>The existing problems in the field of electricity usage include inefficient and imprudent appliance usage, as  well as outdated technology. Previous attempts have been made to address these issues, but the "E-Sense n Save"  project offers several advantages over similar models on the market. The use of IoT enables real-time data   collection, accurate analysis of energy consumption patterns, and identification of areas of energy waste. The    system incorporates sensors to detect the presence of people in a room, enabling automatic appliance shut-off  without manual intervention. Overall, the project stands out for its innovative use of smart technologies and    sensors to optimize energy usage and reduce wastage.</p>
+
+    <p>The invention's key features include real-time cost-time analysis, integration with IoT hardware, AWS cloud    analytics, personalized energy-saving recommendations, and customizable settings. The system provides users with   insights into their energy usage, helps them make informed decisions to reduce consumption, and ultimately saves  energy and money.</p>
+
+    <p>The project has made progress in developing the hardware setup, including components such as the NodeMCU   microcontroller, current sensor, PIR sensor, and relay module. The software components include the code running   on the NodeMCU, an Android app for user interaction, and a cloud service for data storage and analysis. The   workflow involves data collection from sensors, communication with the cloud, and generating daily reports on     energy consumption and cost-time analysis for households.</p>
+
+    <p>Advantages of the invention include reduced energy bills, environmental benefits through reduced carbon    emissions, and multiple user access for remote control of devices. The project aims to create a user-friendly and  accessible system that promotes energy-saving habits and contributes to a more sustainable future.</p>
+    
+    <hr size="2">
+
+    <h2>Project Inventors</h2>
+
+<d  iv class="inventors-container">
+    <figure class="inventor">
+      <img src="images/mrun-fotor-20230625121442.png" alt="Inventor 1">
+      <figcaption>Mrunal Vibhute</figcaption>
+    </figure>
+
+    <figure class="inventor">
+      <img src="images/harshu-fotor-20230625121242.png" alt="Inventor 2">
+      <figcaption>Harshita Khairnar</figcaption>
+    </figure>
+
+    <figure class="inventor">
+      <img src="images/ani-fotor-20230625121556.png" alt="Inventor 3">
+      <figcaption>Anisha Jain</figcaption>
+    </figure>
+
+    <figure class="inventor">
+      <img src="images/me-fotor-20230625121434.png" alt="Inventor 4">
+      <figcaption>Kaushiki Khabri</figcaption>
+    </figure>
+    </div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 E-Sense N Saves. All rights reserved.</p>
+    </footer>
+</body>
+</html>
