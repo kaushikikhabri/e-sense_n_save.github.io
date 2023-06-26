@@ -6,9 +6,20 @@
 }
 
 /* Global styles */
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; 
+    background-image: url('images/geometric-leaves.webp');
+    background-repeat: repeat;
+      
+} */
+
 body {
     font-family: Arial, sans-serif;
-}
+    background-color: #f8f8f8; /* Set the desired background color */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('images/back1.webp');
+    background-repeat: repeat;
+  }
 
 .container {
     max-width: 960px;
@@ -17,6 +28,7 @@ body {
 }
 
 /* Navigation bar */
+
 nav {
     background-color: #333;
     color: #fff;
@@ -48,6 +60,7 @@ footer {
     background-color: #f5f5f5;
     padding: 20px;
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Table */
@@ -114,7 +127,100 @@ tbody tr {
     animation-delay: calc(0.1s * var(--animation-index));
 }
 
-/* Footer */
-footer {
+
+h1 {
+    width: 47%;
+    word-wrap: break-word;
+    font-size: 56px;
+    font-family: "Arial Black", sans-serif;
+    font-weight: bold;
+}
+
+h2{
+    width: 55%;
+    word-wrap: break-word;
+    font-size: 30px;
+    font-family: "Arial Black", sans-serif;
+    font-weight: bold;
+}
+.out{
+    margin-top: 100px;
+}
+.out,img{
+    margin-left: 100px;   
+}
+.out p{
+    font-size: 22px;
+}
+p{
+    margin-top: 20px;
+    width: 50%;
+    word-wrap: break-word;
+    color: #918e8e;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+footer p{
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 800px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-down animation */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Header */
+header {
     animation: fadeIn 1s ease-in-out;
 }
+
+/* Navigation bar */
+nav {
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Table rows */
+tbody tr {
+    animation: fadeIn 0.5s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: calc(0.1s * var(--animation-index));
+}
+
+/* Animation for images */
+img {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for text */
+h1,
+h2,
+p {
+    animation: slideDown 1s ease-in-out;
+}
+
