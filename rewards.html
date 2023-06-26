@@ -7,6 +7,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
+    <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          height: 100vh; /* Adjust this value based on your layout */
+        }
+
+        .circle {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background-color: rgba(161, 22, 22, 0.938);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden; /* Add this line to hide any overflow */
+        }
+
+        .circle img {
+          margin-right: 95px;
+          max-width: 60%; /* Set the maximum width to 100% */
+          max-height: 60%; /* Set the maximum height to 100% */
+        }
+
+        footer p{
+            text-align: center;
+            margin: auto;
+        }
+      </style>
+      
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -41,8 +72,12 @@
     </nav>
 
     <div class="container">
-        <p>Save energy, save money, save the planet</p>
-    </div>
+        <div class="circle">
+          <img src="images/award.png" alt="Trophy Icon">
+        </div>
+
+      </div>
+      
 
     <footer>
         <p>&copy; 2023 E-Sense N Saves. All rights reserved.</p>
