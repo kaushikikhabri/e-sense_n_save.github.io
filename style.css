@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.input-container {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #8EDCE6, #0079C2);
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('electricity_bulb.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Rest of the CSS code remains the same */
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 7px;
+  border-radius: 3px;
+  border: 2px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
